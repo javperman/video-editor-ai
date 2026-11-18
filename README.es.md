@@ -128,13 +128,7 @@ El repositorio se desarrolla con un flujo asistido por IA:
 
 Demo de Peresotech producida con este pipeline (8:01): pantalla + PiP del móvil, cortes de silencio, subtítulos, máster de audio y QC. Datos sintéticos; no hay sistemas reales conectados.
 
-El vídeo before/after del proceso de edición sigue pendiente:
-
-1. Grabación original con errores y silencios.
-2. `edit_plan.json` generado y una revisión inmutable.
-3. Corte final con subtítulos, PiP, máster de audio y QC.
-
-No se incluye un vídeo simulado en lugar de un render real.
+El vídeo before/after del proceso de edición no está incluido; la demo de arriba es una salida real producida con el pipeline. No se incluye un vídeo simulado en lugar de un render real.
 
 ## Límites
 
