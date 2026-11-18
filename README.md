@@ -127,9 +127,11 @@ The repository is developed with an AI-assisted workflow:
 
 ## Demo
 
-<!-- PENDIENTE: enlazar un before/after real; no usar capturas inventadas. -->
+[![Demo: chat assistant that qualifies and books a call](https://i.ytimg.com/vi/XcZ60adpBms/hqdefault.jpg)](https://youtu.be/XcZ60adpBms)
 
-A before/after video is pending. Planned demo:
+A Peresotech demo produced with this pipeline (8:01): screen + mobile PiP, silence cuts, subtitles, audio master and QC. Synthetic data; no real systems are connected.
+
+A before/after video of the editing process is still pending:
 
 1. Raw screen + phone recording with mistakes and silences.
 2. Generated `edit_plan.json` and one immutable revision.

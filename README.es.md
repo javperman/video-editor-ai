@@ -124,9 +124,11 @@ El repositorio se desarrolla con un flujo asistido por IA:
 
 ## Demo
 
-<!-- PENDIENTE: enlazar un before/after real; no usar capturas inventadas. -->
+[![Demo: asistente de chat que cualifica y agenda una llamada](https://i.ytimg.com/vi/XcZ60adpBms/hqdefault.jpg)](https://youtu.be/XcZ60adpBms)
 
-El vídeo before/after está pendiente. Demo prevista:
+Demo de Peresotech producida con este pipeline (8:01): pantalla + PiP del móvil, cortes de silencio, subtítulos, máster de audio y QC. Datos sintéticos; no hay sistemas reales conectados.
+
+El vídeo before/after del proceso de edición sigue pendiente:
 
 1. Grabación original con errores y silencios.
 2. `edit_plan.json` generado y una revisión inmutable.
