@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "spike-example",
+  "revision": 1,
+  "parent_revision": null,
+  "timebase": {
+    "fps": 30,
+    "width": 1920,
+    "height": 1080
+  },
+  "intent": {
+    "goal": "Prueba de esquema",
+    "language": "es"
+  },
+  "sources": [
+    {
+      "id": "screen",
+      "sha256": "e9be3d2ecf196e4de1d5a68c69a33eafb2e8e58eb12da07e21fbbc4c17586854",
+      "path_rel": "tests/fixtures/spike/screen.mp4",
+      "kind": "video",
+      "role": "screen",
+      "duration_frames": 360,
+      "read_only": true
+    },
+    {
+      "id": "phone",
+      "sha256": "9575dc3194a2cdb1268fdf04d996e8011263e14052e6a55e58440de016450291",
+      "path_rel": "tests/fixtures/spike/phone.mp4",
+      "kind": "video",
+      "role": "phone_cam",
+      "duration_frames": 360,
+      "read_only": true
+    },
+    {
+      "id": "voice",
+      "sha256": "a2bb900a4e9fd49f912d09822c5d93c2ee000e93a554aae7978a26722dd3ca6c",
+      "path_rel": "tests/fixtures/spike/voice.wav",
+      "kind": "audio",
+      "role": "voice",
+      "duration_frames": 360,
+      "read_only": true
+    }
+  ],
+  "timeline": {
+    "tracks": [
+      {
+        "id": "V1",
+        "kind": "video",
+        "role": "screen",
+        "items": [
+          {
+            "id": "screen-1",
+            "source": "screen",
+            "source_in": 0,
+            "source_out": 360,
+            "timeline_in": 0,
+            "duration_frames": 360
+          }
+        ]
+      },
+      {
+        "id": "V2",
+        "kind": "video",
+        "role": "webcam",
+        "items": [
+          {
+            "id": "phone-1",
+            "source": "phone",
+            "source_in": 0,
+            "source_out": 360,
+            "timeline_in": 0,
+            "duration_frames": 360,
+            "transform": {
+              "scale": 0.28,
+              "x": 60,
+              "y": -60
+            }
+          }
+        ]
+      },
+      {
+        "id": "A1",
+        "kind": "audio",
+        "role": "voice",
+        "items": [
+          {
+            "id": "voice-1",
+            "source": "voice",
+            "source_in": 0,
+            "source_out": 360,
+            "timeline_in": 0,
+            "duration_frames": 360
+          }
+        ]
+      }
+    ]
+  },
+  "edits": {
+    "cuts": [],
+    "layouts": [],
+    "zooms": [
+      {
+        "id": "zoom-1",
+        "target": "screen-1",
+        "timeline_in": 60,
+        "duration_frames": 60,
+        "center_x": 0.5,
+        "center_y": 0.5,
+        "magnification": 1.5
+      }
+    ],
+    "annotations": [],
+    "subtitles": [
+      {
+        "id": "sub-1",
+        "timeline_in": 30,
+        "timeline_out": 120,
+        "text": "Paso de ejemplo"
+      }
+    ],
+    "redactions": [
+      {
+        "id": "red-1",
+        "source": "screen",
+        "source_in": 150,
+        "source_out": 180,
+        "method": "blur",
+        "boxes": [
+          {
+            "x": 0.1,
+            "y": 0.1,
+            "width": 0.2,
+            "height": 0.1
+          }
+        ]
+      }
+    ]
+  },
+  "audio": {
+    "normalization": {
+      "target_lufs": -16,
+      "true_peak_db": -1.5
+    },
+    "music": [],
+    "ducking": {}
+  },
+  "render": {
+    "codec": "h264",
+    "container": "mp4",
+    "resolution": "1080p",
+    "fps": 30
+  },
+  "qc": {},
+  "provenance": {},
+  "approvals": []
+}

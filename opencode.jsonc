@@ -1,0 +1,14 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": ["AGENTS.md"],
+  "experimental": { "todo": true },
+  "agents": {
+    "build": { "steps": 500 }
+  },
+  "permissions": [
+    { "action": "skill", "resource": "iteration-loop", "effect": "allow" },
+    { "action": "skill", "resource": "openchatcut-headless", "effect": "allow" },
+    { "action": "skill", "resource": "edit-plan", "effect": "allow" },
+    { "action": "skill", "resource": "video-qc", "effect": "allow" }
+  ]
+}

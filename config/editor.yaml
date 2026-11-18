@@ -1,0 +1,32 @@
+# Configuración del editor
+
+editor_principal: openchatcut
+editor_respaldo: kdenlive
+motor_auxiliar: remotion
+render_headless: openchatcut-server
+
+openchatcut:
+  version_fijada: 0.2.17
+  appimage_sha256: 1ce151fc2821cd3eecd074c3fb074a9e1f37320c65a1c1cc2c59f82a4dea8f13
+  home_aislado: data/home
+  xdg_config_home: data/config
+  xdg_data_home: data/share
+  xdg_cache_home: data/cache
+  mcp_endpoint: http://127.0.0.1:5199/api/external-mcp/mcp
+  export_endpoint: http://127.0.0.1:5199/export
+  ffmpeg_override: /usr/bin/ffmpeg
+  ffprobe_override: /usr/bin/ffprobe
+  max_workers: 4
+  flags_arranque:
+    - --no-sandbox
+  nota_gpu: >
+    El arranque por defecto intenta la Radeon/NVIDIA y registra fallos del
+    proceso GPU; el render-still y el render de servidor funcionan igualmente.
+    Probar --disable-gpu y --ozone-platform=wayland si la UI falla.
+
+kdenlive:
+  estado: respaldo_no_instalado
+  activar_si: openchatcut falla persistencia, render o reapertura en pruebas ampliadas
+
+remotion:
+  uso: overlay y composición auxiliar cuando el editor no cubra una animación

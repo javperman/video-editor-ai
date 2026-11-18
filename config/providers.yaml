@@ -1,0 +1,38 @@
+# Proveedores de IA. No contiene secretos: las claves van en variables de entorno.
+
+modo_por_defecto: redacted_cloud
+
+transcripcion:
+  primario: faster-whisper-local
+  modelo_candidato: large-v3-turbo
+  compute_type: int8_float16
+  device: cuda
+  fallback: gemini-3.5-transcribe
+
+ocr:
+  primario: tesseract-local
+  idiomas: [spa, eng]
+
+vision:
+  primario: gemini-3.5-flash-lite
+  escalado: gemini-3.8-flash
+  candidatos_openchatcut_go:
+    - mimo-v2.6-flash
+    - glm-5.3-flash
+    - qwen3.8-flash
+  nota: >
+    OpenCode Go se medirá con la misma muestra antes de sustituir a Gemini.
+    No se asume que su cuota sea API ilimitada ni que los metadatos de vídeo
+    impliquen límites o calidad suficientes.
+
+planificacion:
+  primario: deepseek-v4.1-flash
+  via: opencode-go
+  fallback: gemini-3.5-flash-lite
+
+privacidad:
+  gemini_api_gratuita: prohibida
+  gemini_api_pago: permitida_con_redaccion_previa
+  modelos_que_entrenan: prohibidos
+  subir_video_completo: false
+  registro_egress: true

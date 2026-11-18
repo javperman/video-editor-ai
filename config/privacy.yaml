@@ -1,0 +1,11 @@
+# Política de privacidad y egress
+
+- Originales: solo lectura, hash SHA-256 antes y después.
+- Datos que salen por defecto: fotogramas recortados y redactados, nunca el
+  vídeo completo.
+- OCR local antes de cualquier envío; se detectan correos, teléfonos, IP,
+  tokens y contraseñas.
+- Cada envío registra proveedor, modelo, hash de la imagen, intervalo y tokens.
+- `local_only`: impide cualquier llamada externa.
+- Gemini API gratuita: prohibida con material real.
+- Modelos que entrenan con las peticiones: prohibidos para material real.
